@@ -4,7 +4,33 @@
     <meta charset="UTF-8">
     <title>Product Manager</title>
 </head>
-<body>
+<br>
+<div align='center'/>
+    <h1>Product Manager</h1>
+    <a href="new">Create New Product</a>
+    <br></br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Name</th>
+                <th>Brand</th>
+                <th>Maid in</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="product : ${listProducts}">
+                <td th:text="${product.id}">Product ID</td>
+                <td th:text="${product.name}">Name</td>
+                <td th:text="${product.brand}">Brand</td>
+                <td th:text="${product.maidin}">Maid In</td>
+                <td th:text="${product.price}">Price</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
 
 </body>
 </html>
